@@ -3,8 +3,6 @@ package utils;
 import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.given;
-import static org.apache.http.HttpStatus.SC_CREATED;
-import static org.apache.http.HttpStatus.SC_OK;
 import static utils.ReqSpecs.*;
 
 public class TMDBApi {
@@ -20,7 +18,7 @@ public class TMDBApi {
     {
         return given().spec(requestWithBodyAndSession(basePath,body,sessionId)).log().all()
                 .when().post()
-                .then().log().all()//.assertThat().statusCode(SC_CREATED)
+                .then().log().all()
                 .extract().response();
     }
 
@@ -30,7 +28,7 @@ public class TMDBApi {
         return given().spec(requestWithBodyAndSession(basePath,body,sessionId))
                 .pathParam(pathName,pathValue).log().all()
                 .when().post()
-                .then().log().all()//.assertThat().statusCode(SC_CREATED)
+                .then().log().all()
                 .extract().response();
     }
 
@@ -45,7 +43,7 @@ public class TMDBApi {
         return given().spec(standardRequest(basePath))
                 .pathParam(pathName,pathValue).log().all()
                 .when().get()
-                .then().log().all()//.assertThat().statusCode(SC_OK)
+                .then().log().all()
                 .extract().response();
     }
 
@@ -66,7 +64,7 @@ public class TMDBApi {
         return given().spec(requestWithSessionQuery(basePath, sessionId, queryName, queryValue))
                 .pathParam(pathName,pathValue).log().all()
                 .when().post()
-                .then().log().all()//.assertThat().statusCode(SC_CREATED)
+                .then().log().all()
                 .extract().response();
     }
 
