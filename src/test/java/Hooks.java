@@ -3,15 +3,10 @@ import entities.authentication.NewSession;
 import entities.authentication.ValidateTokenLogin;
 import io.restassured.response.Response;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
-import requests.Lists;
 
-import java.util.ArrayList;
 import java.util.logging.Logger;
 
-import static io.restassured.RestAssured.given;
 import static utils.TMDBApi.*;
 
 public class Hooks {

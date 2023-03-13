@@ -1,11 +1,9 @@
 package utils;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.*;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Paths;
 
 public class JSONHelper {
     private static ObjectMapper objectMapper = getDefaultObjectMapper();
