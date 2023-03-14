@@ -1,12 +1,12 @@
 {
     "createListBody": {
         "name": "This is my awesome test list",
-        "description": "A new day, a new description, yei",
+        "description": "A new day, a new description, yei1",
         "language": "en"
     },
     "createExtraListBody": {
         "name": "This is my awesome test list",
-        "description": "Another day, another description, yei",
+        "description": "Another day, another description, yei1",
         "language": "en"
     },
     "addMovieBody": {
